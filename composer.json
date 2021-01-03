@@ -1,6 +1,6 @@
 {
     "name": "heimseiten/contao-inviewport-bundle",
-    "description": "Fügt eine Klasse hinzu wenn ein Element im Viewport ist.",
+    "description": "Fügt eine Klasse hinzu, wenn ein Element im Viewport ist.",
     "keywords": [
         "Viewport",
         "CSS",
