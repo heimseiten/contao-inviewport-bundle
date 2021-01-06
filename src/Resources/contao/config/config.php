@@ -9,6 +9,3 @@
  * please view the LICENSE file that was distributed with this source code.
  * @link https://github.com/heimseiten/contao-inviewport-bundle
  */
-
-
-$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/heimseitencontaoinviewport/inViewport.js';
