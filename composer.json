@@ -11,7 +11,7 @@
     "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "Niels Hegmans",
+            "name": "heimseiten.de - Webdesign aus Köln",
             "email": "info@heimseiten.de",
             "homepage": "https://www.heimseiten.de",
             "role": "Developer"
@@ -22,7 +22,7 @@
         "source": "https://github.com/heimseiten/contao-inviewport-bundle"
     },
     "require": {
-        "contao/core-bundle": "^4.0"
+        "contao/core-bundle": "^4.4"
     },
     "require-dev": {
         "contao/easy-coding-standard": "^3.0",
