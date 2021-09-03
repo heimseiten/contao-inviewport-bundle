@@ -4,28 +4,32 @@
 .fadeinup.ivp .flexbox_inside > *,
 .fadeinup.ivp .formbody > *,
 .fadeinup.ivp .flex-images > * { opacity: 0; top: 100px; position: relative; 
-	@media screen and (prefers-reduced-motion: reduce) { opacity: 1; top: 0px; }
+	@media screen and (prefers-reduced-motion: reduce) { 
+		opacity: 1; top: 0px; 
+	}
 }
 .fadeinup.wivp:not(.ce_gallery), 
-.fadeinup.wivp .flexbox_inside > *,
-.fadeinup.wivp .formbody > *,
-.fadeinup.wivp .flex-images > * { opacity: 1; top: 0px; transition: opacity 2s ease-in-out, top 1.5s ease-in-out; 
-	@media screen and (prefers-reduced-motion: reduce) { transition: none; }
-	&:nth-child(1) { transition-delay: 0s; }
-	&:nth-child(2) { transition-delay: 0.25s; }
-	&:nth-child(3) { transition-delay: 0.5s; }
-	&:nth-child(4) { transition-delay: 0.75s; }
-	&:nth-child(5) { transition-delay: 1s; }
-	&:nth-child(6) { transition-delay: 1.25s; }
-	&:nth-child(7) { transition-delay: 1.5s; }
-	&:nth-child(8) { transition-delay: 1.75s; }
-	&:nth-child(9) { transition-delay: 2s; }
-	&:nth-child(10) { transition-delay: 2.25s; }
-	&:nth-child(11) { transition-delay: 2.5s; }
-	&:nth-child(12) { transition-delay: 2.75s; }
-	&:nth-child(13) { transition-delay: 3s; }
-	&:nth-child(14) { transition-delay: 3.25s; }
-	&:nth-child(15) { transition-delay: 3.5s; }
+.fadeinup.wivp .flexbox_inside > .widget,
+.fadeinup.wivp .formbody > .widget,
+.fadeinup.wivp .flex-images > .widget { opacity: 1; top: 0px; transition: opacity 1.5s ease-in-out, top 1.5s ease-in-out; 
+	&:nth-of-type(1) { transition-delay: 0s; }
+	&:nth-of-type(2) { transition-delay: 0.25s; }
+	&:nth-of-type(3) { transition-delay: 0.5s; }
+	&:nth-of-type(4) { transition-delay: 0.75s; }
+	&:nth-of-type(5) { transition-delay: 1s; }
+	&:nth-of-type(6) { transition-delay: 1.25s; }
+	&:nth-of-type(7) { transition-delay: 1.5s; }
+	&:nth-of-type(8) { transition-delay: 1.75s; }
+	&:nth-of-type(9) { transition-delay: 2s; }
+	&:nth-of-type(10) { transition-delay: 2.25s; }
+	&:nth-of-type(11) { transition-delay: 2.5s; }
+	&:nth-of-type(12) { transition-delay: 2.75s; }
+	&:nth-of-type(13) { transition-delay: 3s; }
+	&:nth-of-type(14) { transition-delay: 3.25s; }
+	&:nth-of-type(15) { transition-delay: 3.5s; }
+	@media screen and (prefers-reduced-motion: reduce) { 
+		transition: none; 
+	}
 }
     
 .ivp_active {
