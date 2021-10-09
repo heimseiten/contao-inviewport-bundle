@@ -29,6 +29,16 @@
 	&:nth-of-type(13) { transition-delay: 3s; }
 	&:nth-of-type(14) { transition-delay: 3.25s; }
 	&:nth-of-type(15) { transition-delay: 3.5s; }
+	&:nth-of-type(16) { transition-delay: 3.75s; }
+	&:nth-of-type(17) { transition-delay: 4s; }
+	&:nth-of-type(18) { transition-delay: 4.25s; }
+	&:nth-of-type(19) { transition-delay: 4.5s; }
+	&:nth-of-type(20) { transition-delay: 4.75s; }
+	&:nth-of-type(21) { transition-delay: 5s; }
+	&:nth-of-type(22) { transition-delay: 5.25s; }
+	&:nth-of-type(23) { transition-delay: 5.5s; }
+	&:nth-of-type(24) { transition-delay: 5.75s; }
+	&:nth-of-type(25) { transition-delay: 6s; }
 	@media screen and (prefers-reduced-motion: reduce) { 
 		transition: none; 
 	}
