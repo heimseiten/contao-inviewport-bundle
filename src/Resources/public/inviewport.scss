@@ -29,6 +29,30 @@
 	bottom: 0px; 
 	transition: opacity 1.5s ease-in-out, bottom 1.5s ease-in-out; 
 }
+.mod_article .content-text.EinblendenVonBeidenSeiten.ivp { 
+	.rte, picture { position: relative; }
+	&.media--right {
+		.rte { opacity: 0; right: 100px; }
+		picture { opacity: 0; left: 100px; }
+	}
+	&.media--left {
+		.rte { opacity: 0; left: 100px; }
+		picture { opacity: 0; right: 100px; }
+	}
+}
+.mod_article .content-text.EinblendenVonBeidenSeiten.wivp {
+	.rte, picture {
+		transition: opacity 1.5s ease-in-out, right 1.5s ease-in-out, left 1.5s ease-in-out;
+	}
+	&.media--right { 
+		.rte { opacity: 1; right: 0px; }
+		picture { opacity: 1; left: 0px; }
+	}
+	&.media--left { 
+		.rte { opacity: 1; left: 0px; }
+		picture { opacity: 1; right: 0px; }
+	}
+}
 .EinblendenVonUnten.ivp,
 .EinblendenVonUnten.ivp .formbody > * { 
 	opacity: 0; 
