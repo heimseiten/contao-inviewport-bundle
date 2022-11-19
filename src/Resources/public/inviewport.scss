@@ -1,4 +1,12 @@
 .ivp { overflow: visible; }
+.Einblenden.ivp { 
+	opacity: 0; 
+	position: relative; 
+}
+.Einblenden.wivp {
+	opacity: 1; 
+	transition: opacity 1.5s ease-in-out;
+}
 .EinblendenVonRechts.ivp { 
 	opacity: 0; 
 	left: 100px; 
