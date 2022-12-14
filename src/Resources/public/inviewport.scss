@@ -61,6 +61,16 @@
 		picture { opacity: 1; right: 0px; }
 	}
 }
+.mod_article .content-text.EinblendenVonBeidenSeiten.nacheinanderEinblenden.ivp.iivp {
+	&.media--right { 
+		.rte { transition: opacity 1.5s ease-in-out, right 1.5s ease-in-out; }
+		picture { transition: opacity 1.5s ease-in-out .5s, left 1.5s ease-in-out .5s; }
+	}
+	&.media--left { 
+		.rte { transition: opacity 1.5s ease-in-out .5s, left 1.5s ease-in-out .5s;  }
+		picture { transition: opacity 1.5s ease-in-out, right 1.5s ease-in-out; }
+	}
+}
 .EinblendenVonUnten.ivp:not(.above_viewport),
 .EinblendenVonUnten.ivp:not(.above_viewport) .formbody > * { 
 	opacity: 0; 
