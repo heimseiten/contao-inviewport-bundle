@@ -32,7 +32,7 @@ function changeClass(element) {
 }
 
 function belowOrAbove(element, observedElement) {
-  if (observedElement.boundingClientRect.top > 0) {
+  if (observedElement.boundingClientRect.top >= 0) {
     element.classList.add('below_viewport')
     element.classList.remove('above_viewport')
   } else {
