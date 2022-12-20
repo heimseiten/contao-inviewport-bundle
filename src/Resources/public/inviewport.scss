@@ -1,5 +1,14 @@
 .ivp { overflow: visible; }
 
+.Einblenden.ivp:not(.above_viewport) { 
+	opacity: 0; 
+	position: relative; 
+}
+.Einblenden.ivp.iivp {
+	opacity: 1; 
+	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s);
+}
+
 .EinblendenVonHinten.ivp:not(.above_viewport) { 
 	opacity: 0; 
 	transform: scale(.8);
@@ -8,7 +17,7 @@
 .EinblendenVonHinten.ivp.iivp {
 	opacity: 1; 
 	transform: scale(1);
-	transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+	transition: transform 1.5s ease-out var(--ivp_animation_delay, 0s), opacity 1.5s ease-out var(--ivp_animation_delay, 0s);
 }
 
 .EinblendenVonVorne.ivp:not(.above_viewport) { 
@@ -19,16 +28,7 @@
 .EinblendenVonVorne.ivp.iivp {
 	opacity: 1; 
 	transform: scale(1);
-	transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-}
-
-.Einblenden.ivp:not(.above_viewport) { 
-	opacity: 0; 
-	position: relative; 
-}
-.Einblenden.ivp.iivp {
-	opacity: 1; 
-	transition: opacity 1.5s ease-in-out;
+	transition: transform 1.5s ease-out var(--ivp_animation_delay, 0s), opacity 1.5s ease-out var(--ivp_animation_delay, 0s);
 }
 
 .EinblendenVonRechts.ivp:not(.above_viewport) { 
@@ -39,7 +39,7 @@
 .EinblendenVonRechts.ivp.iivp {
 	opacity: 1; 
 	transform: translateX(0); 
-	transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; 
+	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
 }
 
 .EinblendenVonLinks.ivp:not(.above_viewport) { 
@@ -50,7 +50,7 @@
 .EinblendenVonLinks.ivp.iivp {
 	opacity: 1; 
 	transform: translateX(0);
-	transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; 
+	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
 }
 
 .EinblendenVonOben.ivp:not(.above_viewport) { 
@@ -61,7 +61,7 @@
 .EinblendenVonOben.ivp.iivp {
 	opacity: 1; 
 	transform: translateY(0); 
-	transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; 
+	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
 }
 
 .EinblendenVonUnten.ivp:not(.above_viewport),
@@ -74,7 +74,7 @@
 .EinblendenVonUnten.ivp.iivp .formbody > * { 
 	opacity: 1; 
 	transform: translateY(0);
-	transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; 
+	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
 }
 
 .mod_article .content-text.EinblendenVonBeidenSeiten.ivp:not(.above_viewport) { 
@@ -90,7 +90,7 @@
 }
 .mod_article .content-text.EinblendenVonBeidenSeiten.ivp.iivp {
 	.rte, & > figure img {
-		transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+		transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s);
 	}
 	&.media--right { 
 		.rte {		opacity: 1; transform: translateX(0); }
@@ -103,12 +103,12 @@
 }
 .mod_article .content-text.EinblendenVonBeidenSeiten.nacheinanderEinblenden.ivp.iivp {
 	&.media--right { 
-		.rte {		transition: opacity 1.5s ease-in-out,		transform 1.5s ease-in-out; }
-		& > figure img {transition: opacity 1.5s ease-in-out .5s,	transform 1.5s ease-in-out .5s; }
+		.rte {		transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); }
+		& > figure img {transition: opacity 1.5s ease-out var(--ivp_animation_delay, .5s), transform 1.5s ease-out var(--ivp_animation_delay, .5s); }
 	}
 	&.media--left { 
-		.rte {		transition: opacity 1.5s ease-in-out .5s,	transform 1.5s ease-in-out .5s;  }
-		& > figure img {transition: opacity 1.5s ease-in-out,		transform 1.5s ease-in-out; }
+		.rte {		transition: opacity 1.5s ease-out var(--ivp_animation_delay, .5s), transform 1.5s ease-out var(--ivp_animation_delay, .5s);  }
+		& > figure img {transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); }
 	}
 }
 .EinblendenVonUnten.ivp.iivp .formbody > * { 
