@@ -3,4 +3,14 @@ Jedem Element, welches die Klasse ivp (in view port) hat, werden die Klassen iiv
 
 Zudem wird dem Body-Tag die Klasse ivp_active hinzugefügt, wenn die Funktionalität aktiv ist.
 
-Mit den CSS-Klassen "fadeinup" und "ivp" können Elemente eingeblendet werden, wenn sie in den Viewport kommen.
+---
+
+Mit folgenden Klassen, plus der Klasse ivp, könnnen Elemente eingeblendet werden:
+
+- einblenden
+- einblendenVonUnten
+- einblendenVonOben
+- einblendenVonRechts
+- einblendenVonLinks
+- einblendenVonHinten
+- einblendenVonVorne
