@@ -1,5 +1,11 @@
 # inViewport
-Jedem Element, welches die Klasse ivp (in view port) hat, werden die Klassen iivp (is in view port) und wivp (was in view port) hinzugefügt, wenn es dem Besucher angezeigt wird, wobei iivp wieder entfernt wird, sobald der Besucher das Element nicht mehr sieht.
+Jedem Element, welches die Klasse ivp (in view port) hat, werden folgende Klassen hinzugefügt:
+
+- iivp (is in view port)
+- wivp (was in view port)
+- above_viewport
+- below_viewport
+- over_half_ivp
 
 Zudem wird dem Body-Tag die Klasse ivp_active hinzugefügt, wenn die Funktionalität aktiv ist.
 
