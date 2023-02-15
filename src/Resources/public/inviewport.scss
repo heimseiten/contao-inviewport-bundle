@@ -64,7 +64,7 @@
 	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
 }
 
-.einblendenVonUnten.ivp:not(.above_viewport):not(form),
+.einblendenVonUnten.ivp:not(.above_viewport),
 .einblendenVonUnten.ivp:not(.above_viewport) .formbody > * { 
 	opacity: 0; 
 	transform: translateY(100px); 
