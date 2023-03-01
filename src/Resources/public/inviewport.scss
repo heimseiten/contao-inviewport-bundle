@@ -125,3 +125,16 @@
 	&:nth-child(11) { transition-delay: 2s; }
 	&:nth-child(12) { transition-delay: 2.2s; }
 }
+.AnimationVerzögern.ivp.iivp,
+.AnimationVerzögern025.ivp.iivp { transition-delay: .25s; }
+.AnimationVerzögern05.ivp.iivp { transition-delay: .5s; }
+.AnimationVerzögern1.ivp.iivp { transition-delay: 1s; }
+.AnimationVerzögern15.ivp.iivp { transition-delay: 1.5s; }
+
+.Animationsdauer.ivp.iivp,
+.Animationsdauer025.ivp.iivp { transition-duration: .25s; }
+.Animationsdauer05.ivp.iivp { transition-duration: .5s; }
+.Animationsdauer1.ivp.iivp { transition-duration: 1s; }
+.Animationsdauer15.ivp.iivp { transition-duration: 1.5s; }
+.Animationsdauer2.ivp.iivp { transition-duration: 2s; }
+.Animationsdauer25.ivp.iivp { transition-duration: 2.5s; }
