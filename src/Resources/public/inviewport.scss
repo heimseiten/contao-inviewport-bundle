@@ -115,8 +115,14 @@
 .mod_article .media--second_image.BilderEinblenden.ivp:not(.above_viewport) { 
 	overflow: visible;
 	figure:not(.second_image), figure.second_image { position: relative; }
-	figure:not(.second_image) { opacity: 0; transform: translateX(-100px); }
-	figure.second_image { opacity: 0; transform: translateX(100px); }
+	&.media--right {
+		figure:not(.second_image) { opacity: 0; transform: translateX(100px); }
+		figure.second_image { opacity: 0; transform: translateX(-100px); }
+	}
+	&.media--left {
+		figure:not(.second_image) { opacity: 0; transform: translateX(-100px); }
+		figure.second_image { opacity: 0; transform: translateX(100px); }
+	}
 }
 .mod_article .content-text.BilderEinblenden.ivp.iivp {
 	figure:not(.second_image), figure.second_image { transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); } 
