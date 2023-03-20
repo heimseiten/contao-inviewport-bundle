@@ -126,8 +126,10 @@
 }
 .mod_article .content-text.BilderEinblenden.ivp.iivp {
 	figure:not(.second_image), figure.second_image { transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); } 
-	figure:not(.second_image) { opacity: 1; transform: translateX(0); }
-	figure.second_image { opacity: 1; transform: translateX(0); }
+	&.media--left, &.media--right {
+		figure:not(.second_image) { opacity: 1; transform: translateX(0); }
+		figure.second_image { opacity: 1; transform: translateX(0); }
+	}
 }
 .mod_article .media--second_image.BilderEinblendenVonUnten.ivp:not(.above_viewport) { 
 	overflow: visible;
