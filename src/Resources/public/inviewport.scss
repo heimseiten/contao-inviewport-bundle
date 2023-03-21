@@ -6,7 +6,7 @@
 }
 .einblenden.ivp.iivp {
 	opacity: 1; 
-	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s);
+	transition: opacity 1.5s ease-in-out var(--ivp_animation_delay, 0s);
 }
 
 .einblendenVonHinten.ivp:not(.above_viewport) { 
