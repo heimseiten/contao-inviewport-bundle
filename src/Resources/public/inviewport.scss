@@ -1,3 +1,8 @@
+:root {
+	--fade_duration: 1.5s;
+	--move_duration: 1.5s;
+	--ivp_animation_delay: 0s;
+}
 .ivp { overflow: visible; }
 
 .einblenden.ivp:not(.above_viewport) { 
@@ -6,7 +11,7 @@
 }
 .einblenden.ivp.iivp {
 	opacity: 1; 
-	transition: opacity 1.5s ease-in-out var(--ivp_animation_delay, 0s);
+	transition: opacity var(--fade_duration) ease-in-out var(--ivp_animation_delay);
 }
 
 .einblendenVonHinten.ivp:not(.above_viewport) { 
@@ -17,7 +22,7 @@
 .einblendenVonHinten.ivp.iivp {
 	opacity: 1; 
 	transform: scale(1);
-	transition: transform 1s ease-out var(--ivp_animation_delay, 0s), opacity 1s ease-out var(--ivp_animation_delay, 0s);
+	transition: transform var(--move_duration) ease-out var(--ivp_animation_delay), opacity var(--fade_duration) ease-out var(--ivp_animation_delay);
 }
 
 .einblendenVonVorne.ivp:not(.above_viewport) { 
@@ -28,7 +33,7 @@
 .einblendenVonVorne.ivp.iivp {
 	opacity: 1; 
 	transform: scale(1);
-	transition: transform 1s ease-out var(--ivp_animation_delay, 0s), opacity 1s ease-out var(--ivp_animation_delay, 0s);
+	transition: transform var(--move_duration) ease-out var(--ivp_animation_delay), opacity var(--fade_duration) ease-out var(--ivp_animation_delay);
 }
 
 .einblendenVonRechts.ivp:not(.above_viewport) { 
@@ -39,7 +44,7 @@
 .einblendenVonRechts.ivp.iivp {
 	opacity: 1; 
 	transform: translateX(0); 
-	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
+	transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); 
 }
 
 .einblendenVonLinks.ivp:not(.above_viewport) { 
@@ -50,7 +55,7 @@
 .einblendenVonLinks.ivp.iivp {
 	opacity: 1; 
 	transform: translateX(0);
-	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
+	transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); 
 }
 
 .einblendenVonOben.ivp:not(.above_viewport) { 
@@ -61,7 +66,7 @@
 .einblendenVonOben.ivp.iivp {
 	opacity: 1; 
 	transform: translateY(0); 
-	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
+	transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); 
 }
 
 .einblendenVonUnten.ivp:not(.above_viewport),
@@ -74,7 +79,7 @@
 .einblendenVonUnten.ivp.iivp .formbody > * { 
 	opacity: 1; 
 	transform: translateY(0);
-	transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); 
+	transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); 
 }
 
 .mod_article .content-text.einblendenVonBeidenSeiten.ivp:not(.above_viewport) { 
@@ -90,7 +95,7 @@
 }
 .mod_article .content-text.einblendenVonBeidenSeiten.ivp.iivp {
 	.rte, & > figure img {
-		transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s);
+		transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay);
 	}
 	&.media--right { 
 		.rte {		opacity: 1; transform: translateX(0); }
@@ -103,12 +108,12 @@
 }
 .mod_article .content-text.einblendenVonBeidenSeiten.nacheinanderEinblenden.ivp.iivp {
 	&.media--right { 
-		.rte {		transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); }
-		& > figure img {transition: opacity 1.5s ease-out var(--ivp_animation_delay, .5s), transform 1.5s ease-out var(--ivp_animation_delay, .5s); }
+		.rte {		transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); }
+		& > figure img {transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay, .5s), transform var(--move_duration) ease-out var(--ivp_animation_delay, .5s); }
 	}
 	&.media--left { 
-		.rte {		transition: opacity 1.5s ease-out var(--ivp_animation_delay, .5s), transform 1.5s ease-out var(--ivp_animation_delay, .5s);  }
-		& > figure img {transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); }
+		.rte {		transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay, .5s), transform var(--move_duration) ease-out var(--ivp_animation_delay, .5s);  }
+		& > figure img {transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); }
 	}
 }
 
@@ -119,7 +124,7 @@
 	figure.second_image { opacity: 0; transform: translateX(100px); }
 }
 .mod_article .content-text.BilderEinblenden.ivp.iivp {
-	figure:not(.second_image), figure.second_image { transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); } 
+	figure:not(.second_image), figure.second_image { transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); } 
 	figure:not(.second_image) { opacity: 1; transform: translateX(0); }
 	figure.second_image { opacity: 1; transform: translateX(0); }
 }
@@ -130,8 +135,8 @@
 	figure.second_image { opacity: 0; transform: translateY(100px); }
 }
 .mod_article .content-text.BilderEinblendenVonUnten.ivp.iivp {
-	figure:not(.second_image), figure.second_image { transition: opacity 1.5s ease-out var(--ivp_animation_delay, 0s), transform 1.5s ease-out var(--ivp_animation_delay, 0s); } 
-	figure.second_image { transition: opacity 1.5s ease-out .5s, transform 1.5s ease-out .5s; } 
+	figure:not(.second_image), figure.second_image { transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); } 
+	figure.second_image { transition: opacity var(--fade_duration) ease-out .5s, transform var(--move_duration) ease-out .5s; } 
 	figure:not(.second_image) { opacity: 1; transform: translateY(0); }
 	figure.second_image { opacity: 1; transform: translateY(0); }
 }
