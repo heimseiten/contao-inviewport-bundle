@@ -1,4 +1,6 @@
-document.querySelector('body').classList.add('ivp_active')
+document.addEventListener('DOMContentLoaded', e => {
+  document.querySelector('body').classList.add('ivp_active')
+})
 
 function inViewport(elem, margin_top, margin_bottom, callback) {
   return new IntersectionObserver(
