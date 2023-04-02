@@ -119,26 +119,26 @@
 
 .mod_article .media--second_image.BilderEinblenden.ivp:not(.above_viewport) { 
 	overflow: visible;
-	figure:not(.second_image), figure.second_image { position: relative; }
-	figure:not(.second_image) { opacity: 0; transform: translateX(-100px); }
-	figure.second_image { opacity: 0; transform: translateX(100px); }
+	figure > figure:not(.second_image), figure > figure.second_image { position: relative; }
+	figure > figure:not(.second_image) { opacity: 0; transform: translateX(-100px); }
+	figure > figure.second_image { opacity: 0; transform: translateX(100px); }
 }
 .mod_article .content-text.BilderEinblenden.ivp.iivp {
-	figure:not(.second_image), figure.second_image { transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); } 
-	figure:not(.second_image) { opacity: 1; transform: translateX(0); }
-	figure.second_image { opacity: 1; transform: translateX(0); }
+	figure > figure:not(.second_image), figure > figure.second_image { transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); } 
+	figure > figure:not(.second_image) { opacity: 1; transform: translateX(0); }
+	figure > figure.second_image { opacity: 1; transform: translateX(0); }
 }
 .mod_article .media--second_image.BilderEinblendenVonUnten.ivp:not(.above_viewport) { 
 	overflow: visible;
-	figure:not(.second_image), figure.second_image { position: relative; }
-	figure:not(.second_image) { opacity: 0; transform: translateY(100px); }
-	figure.second_image { opacity: 0; transform: translateY(100px); }
+	figure > figure:not(.second_image), figure > figure.second_image { position: relative; }
+	figure > figure:not(.second_image) { opacity: 0; transform: translateY(100px); }
+	figure > figure.second_image { opacity: 0; transform: translateY(100px); }
 }
 .mod_article .content-text.BilderEinblendenVonUnten.ivp.iivp {
-	figure:not(.second_image), figure.second_image { transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); } 
-	figure.second_image { transition: opacity var(--fade_duration) ease-out .5s, transform var(--move_duration) ease-out .5s; } 
-	figure:not(.second_image) { opacity: 1; transform: translateY(0); }
-	figure.second_image { opacity: 1; transform: translateY(0); }
+	figure > figure:not(.second_image), figure > figure.second_image { transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); } 
+	figure > figure.second_image { transition: opacity var(--fade_duration) ease-out .5s, transform var(--move_duration) ease-out .5s; } 
+	figure > figure:not(.second_image) { opacity: 1; transform: translateY(0); }
+	figure > figure.second_image { opacity: 1; transform: translateY(0); }
 }
 
 .einblendenVonUnten.ivp.iivp .formbody > * { 
