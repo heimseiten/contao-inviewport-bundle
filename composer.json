@@ -22,7 +22,7 @@
         "source": "https://github.com/heimseiten/contao-inviewport-bundle"
     },
     "require": {
-        "contao/core-bundle": "^4.4 || ^5.1"
+        "contao/core-bundle": "^5.1"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.3"
