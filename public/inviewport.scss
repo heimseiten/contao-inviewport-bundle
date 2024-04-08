@@ -58,6 +58,7 @@
 	transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); 
 }
 
+.mod_article:has(.einblendenVonOben) { overflow: hidden; }
 .einblendenVonOben.ivp:not(.above_viewport) { 
 	opacity: 0; 
 	transform: translateY(-100px);
@@ -69,6 +70,7 @@
 	transition: opacity var(--fade_duration) ease-out var(--ivp_animation_delay), transform var(--move_duration) ease-out var(--ivp_animation_delay); 
 }
 
+.mod_article:has(.einblendenVonUnten) { overflow: hidden; }
 .einblendenVonUnten.ivp:not(.above_viewport),
 .einblendenVonUnten.ivp:not(.above_viewport) .formbody > * { 
 	opacity: 0; 
