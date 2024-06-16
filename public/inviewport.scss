@@ -158,17 +158,30 @@
 	&:nth-child(12) { transition-delay: 2.2s; }
 }
 .AnimationVerzögert.ivp.iivp,
-.AnimationVerzögert025.ivp.iivp { transition-delay: .25s; }
-.AnimationVerzögert05.ivp.iivp { transition-delay: .5s; }
-.AnimationVerzögert1.ivp.iivp { transition-delay: 1s; }
-.AnimationVerzögert15.ivp.iivp { transition-delay: 1.5s; }
-.AnimationVerzögert2.ivp.iivp { transition-delay: 2s; }
-.AnimationVerzögert25.ivp.iivp { transition-delay: 2.5s; }
+.verzögert.ivp.iivp,
+.AnimationVerzögert025.ivp.iivp,
+.verzögert025.ivp.iivp { transition-delay: .25s; }
+.AnimationVerzögert05.ivp.iivp,
+.verzögert05.ivp.iivp { transition-delay: .5s; }
+.AnimationVerzögert1.ivp.iivp,
+.verzögert1.ivp.iivp { transition-delay: 1s; }
+.AnimationVerzögert15.ivp.iivp,
+.verzögert15.ivp.iivp { transition-delay: 1.5s; }
+.AnimationVerzögert2.ivp.iivp,
+.verzögert2.ivp.iivp { transition-delay: 2s; }
+.AnimationVerzögert25.ivp.iivp,
+.verzögert25.ivp.iivp { transition-delay: 2.5s; }
 
 .Animationsdauer.ivp.iivp,
-.Animationsdauer025.ivp.iivp { transition-duration: .25s; }
-.Animationsdauer05.ivp.iivp { transition-duration: .5s; }
-.Animationsdauer1.ivp.iivp { transition-duration: 1s; }
-.Animationsdauer15.ivp.iivp { transition-duration: 1.5s; }
-.Animationsdauer2.ivp.iivp { transition-duration: 2s; }
-.Animationsdauer25.ivp.iivp { transition-duration: 2.5s; }
+.Animationsdauer025.ivp.iivp,
+.Dauer025.ivp.iivp { transition-duration: .25s; }
+.Animationsdauer05.ivp.iivp,
+.Dauer05.ivp.iivp { transition-duration: .5s; }
+.Animationsdauer1.ivp.iivp,
+.Dauer1.ivp.iivp { transition-duration: 1s; }
+.Animationsdauer15.ivp.iivp,
+.Dauer15.ivp.iivp { transition-duration: 1.5s; }
+.Animationsdauer2.ivp.iivp,
+.Dauer2.ivp.iivp { transition-duration: 2s; }
+.Animationsdauer25.ivp.iivp,
+.Dauer25.ivp.iivp { transition-duration: 2.5s; }
