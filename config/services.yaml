@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Heimseiten\ContaoInviewportBundle\EventListener\AddInViewportAssetListener:
+        tags:
+            # generatePage (fe_page) wird per #[AsHook] autokonfiguriert.
+            # LayoutEvent (modernes Layout) hier per String-Tag registrieren,
+            # damit die Klasse auf Contao 4.13 nicht aufgelöst werden muss.
+            - { name: kernel.event_listener, event: 'Contao\CoreBundle\Event\LayoutEvent', method: onLayout }

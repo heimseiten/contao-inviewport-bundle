@@ -11,6 +11,18 @@ Zudem wird dem Body-Tag die Klasse ivp_active hinzugefügt, wenn die Funktionali
 
 ---
 
+## Installation
+
+```
+composer require heimseiten/contao-inviewport-bundle
+```
+
+Das JavaScript wird ab Version 3.2 **automatisch** auf jeder Frontend-Seite eingebunden – sowohl im klassischen `fe_page`- als auch im modernen Twig-Layout. Eine manuelle Einbindung bzw. das Aktivieren des JavaScript-Templates ist dafür **nicht mehr nötig**.
+
+Die mitgelieferten Standard-Styles (Einblende-Effekte) sind optional und lassen sich bei Bedarf über *Seitenlayout → JavaScript → JavaScript-Templates → `js_inviewport`* aktivieren.
+
+---
+
 Mit folgenden Klassen, plus der Klasse ivp, könnnen Elemente eingeblendet werden:
 
 - einblenden
