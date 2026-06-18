@@ -1,6 +1,6 @@
 <?php
-  // inViewport.js wird ab v3.2 automatisch eingebunden (AddInViewportAssetListener),
-  // auch im modernen Twig-Layout. Dieses JavaScript-Template lädt daher nur noch
-  // die optionalen Standard-Styles (Einblende-Effekte) des Bundles.
-  $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaoinviewport/inviewport.scss|static';
+  // Obsolet ab v3.3: inViewport.js UND inviewport.css werden automatisch über den
+  // AddInViewportAssetListener eingebunden (auch im modernen Twig-Layout). Dieses
+  // JavaScript-Template macht daher nichts mehr und kann in der Layout-Konfiguration
+  // (JavaScript-Templates) entfernt werden.
 ?>

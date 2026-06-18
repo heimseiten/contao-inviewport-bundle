@@ -20,20 +20,15 @@ use Contao\PageModel;
 use Symfony\Component\Asset\Packages;
 
 /**
- * Bindet inViewport.js automatisch auf jeder Frontend-Seite ein – sowohl im
- * klassischen fe_page- als auch im modernen Twig-Layout. Ersetzt die manuelle
- * Aktivierung über das JavaScript-Template js_inviewport (tl_layout.scripts),
- * die das moderne Layout nicht mehr verarbeitet.
+ * Bindet inViewport.js UND inviewport.css automatisch auf jeder Frontend-Seite
+ * ein – im klassischen (fe_page) wie im modernen Twig-Layout. Ersetzt das alte
+ * js_inviewport.html5, das nur über tl_layout.scripts lief und vom modernen
+ * Layout nicht mehr verarbeitet wird.
  *
- * Abgedeckt werden beide Render-Pfade:
- *  - generatePage-Hook  → klassisches fe_page (Contao 4.13 + 5.x)
- *  - LayoutEvent        → modernes Twig-Layout (Contao 5.x)
- *
- * Der Eintrag landet in $GLOBALS['TL_BODY'] (Body-Ende; im modernen Layout via
- * response_context.end_of_body) unter dem FESTEN Schlüssel
- * 'heimseiten_inviewport'. Das ist exakt derselbe Schlüssel, den andere Bundles
- * via Twig "{% add 'heimseiten_inviewport' to body %}" verwenden → das Script
- * wird automatisch dedupliziert und nie doppelt geladen.
+ * generatePage feuert nur im klassischen Pfad, LayoutEvent nur im modernen –
+ * daher beide. JS landet in TL_BODY (Body-Ende), CSS in TL_CSS (<head>), jeweils
+ * unter dem festen Schlüssel 'heimseiten_inviewport' → automatische Dedup mit
+ * Bundles, die per Twig "{% add 'heimseiten_inviewport' to ... %}" dasselbe tun.
  */
 class AddInViewportAssetListener
 {
@@ -44,31 +39,33 @@ class AddInViewportAssetListener
     #[AsHook('generatePage')]
     public function onGeneratePage(PageModel $pageModel, LayoutModel $layout): void
     {
-        $this->addAsset();
+        $this->addAssets();
     }
 
     /**
-     * Reagiert auf das LayoutEvent des modernen Layouts.
-     *
-     * Bewusst als "object" typisiert und über config/services.yaml
-     * (kernel.event_listener) registriert – NICHT per #[AsEventListener] –,
-     * damit Contao\CoreBundle\Event\LayoutEvent auf Contao 4.13 (wo es die
-     * Klasse nicht gibt) niemals aufgelöst wird und der Container dort nicht
-     * bricht. Auf 4.13 wird das Event nie ausgelöst, die Methode also nie
-     * aufgerufen.
+     * LayoutEvent des modernen Layouts. Bewusst als "object" typisiert und über
+     * config/services.yaml (kernel.event_listener) registriert – NICHT per
+     * Attribut –, damit Contao\CoreBundle\Event\LayoutEvent auf Contao 4.13
+     * (ohne diese Klasse) nie aufgelöst werden muss.
      *
      * @param \Contao\CoreBundle\Event\LayoutEvent $event
      */
     public function onLayout(object $event): void
     {
-        $this->addAsset();
+        $this->addAssets();
     }
 
-    private function addAsset(): void
+    private function addAssets(): void
     {
+        $base = 'bundles/heimseitencontaoinviewport/';
+
+        // JS ans Body-Ende (fragt die .ivp-Elemente sofort ab → defer, damit der DOM steht)
         $GLOBALS['TL_BODY']['heimseiten_inviewport'] = sprintf(
             '<script src="%s" defer></script>',
-            htmlspecialchars($this->packages->getUrl('bundles/heimseitencontaoinviewport/inViewport.js'), ENT_QUOTES),
+            htmlspecialchars($this->packages->getUrl($base.'inViewport.js'), ENT_QUOTES),
         );
+
+        // CSS in den <head>
+        $GLOBALS['TL_CSS']['heimseiten_inviewport'] = $base.'inviewport.css|static';
     }
 }
